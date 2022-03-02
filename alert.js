@@ -105,7 +105,7 @@
 // } else {
 //   result = '이상';
 // }
-// let result = (a+b<4) ? '미만' : '이상';
+// let result = (a+b<4) ? '미만' : '';
 
 //8-2. 아래 if else문을 ?문으로 변경하라
 // let message;
