@@ -124,3 +124,112 @@
 // (login == '임원') ? '환영합니다.' :
 // (login == '') ? '로그인이 필요합니다.':
 //  ''; 간결하게 작성되는 코드와 변수가 어디에 어떻게 저장되는지 잘 확인
+
+//9. 코드 결과 예측
+// alert(null || 2 || undefined); //2
+// alert(alert(1) || 2 || alert(3)); //1과 2 alert메서드는 값을 반환하지 않는다.(=undefined)
+// alert(1 && null && 2); //null
+// alert(alert(1) && alert(2)); //1과 undefined
+// alert(null || 2 && 3 ||4); // 3
+
+// //9-1. 사이 범위 확인하기
+// //14세 이상 90세 이하에 속하는지 확인하는 if문
+// let age;
+// if(age>=14 && age<=90)
+
+//9-2.로그인 구현하기
+// let id = prompt('ID를 입력하세요.','');
+// if(id=='admin'){
+//     let pw = prompt('비밀번호를 입력하세요','');
+
+//     if(id=='admin' && pw=='TheMaster'){
+//     alert('환영합니다!');
+//     }else if(pw == '' || pw == null){
+//     alert('취소되었습니다.');
+// }else {
+//     alert('인증에 실패했습니다.');
+// }
+
+// } else if(id=='' || id==null){
+//     alert('취소됐습니다.');
+// }else{
+//     alert('인증되지 않은 사용자입니다.');
+// }
+
+//nullish 연산자
+//height = height ?? 100;
+//height가 null이거나 undefined인 경우, 100을 할당!
+
+//10.반복문 2부터 10까지의 짝수가 출력되는 반복문 작성
+// for(let i=2;i<=10;i+=2){
+//     alert(i);
+// }
+
+//10-1. 다음 for문을 while문으로 바꾸시오(단, 동작과 출력값이 동일하게)
+//for (let i=0;i<3;i++){
+//     alert(`number ${i}!`);
+// } d
+// let i = 0;
+// while(i<3){
+//     alert(`number ${i}!`);
+//     i++;
+// }
+
+//10-2. 100이상의 값을 입력할 때까지 반복되는 프롬프트 창을 띄우시오.
+// let input = prompt('100이상의 값을 입력해주세요.','');
+// while(input<=100){
+//     let input = prompt('100이상의 값을 입력해주세요.','');
+//     if(input>=100 || input==''){
+//     break;
+// }
+// }
+
+//10-3. 2부터 n까지의 숫자중 소수만 출력해주는 코드를 작성해보자.
+//모르겠음
+// let input=prompt('숫자 몇의 소수를 알고 싶나요?','');
+// nextPrime:
+// for(let pn;pn<=input;pn++){
+//     for(let pn2=2; pn2<pn;pn2++){
+//         if(pn % pn2 == 0) {
+//     continue nextPrime;
+//     }
+//     alert(pn);
+//     }
+// }
+
+// let browser = prompt('사용하는 브라우저는 무엇인가요?','');
+// if(browser=='edge' || browser=='chrome' || browser=='firefox' ||browser== 'safari' || browser=='opera'){
+//     alert('저희 서비스가 지원하는 브라우저를 사용하고 계시네요.');
+// } else
+// alert('현재 페이지가 괜찮아 보이길 바랍니다.');
+
+// let a = +prompt('a?',''); //염병할 +는 뭐지???? 형 변환 스위치문은 자료형이 중요하다.
+// switch(a){
+//     case 0:alert( 0 ); break;
+//     case 1:alert( 1 ); break;
+//     case 2:
+//     case 3
+//     :alert('2,3'); break;
+// }
+
+// function checkAge(age){
+//     return age > 18 ? true : alert('동의받음?');
+// }
+
+// function checkAge2(age){
+//     return age > 18 || confirm('동의받음?');
+// }
+// checkAge(11);
+
+
+function pow(x,n){
+        let k = x;
+    for(let i=1;i<n;i++){
+        k *= x;
+    }
+    return k;
+}
+let x = prompt('자연수를 입력하세요.','');
+let n = prompt('제곱을 입력하세요.','');
+
+alert(pow(x, n));
