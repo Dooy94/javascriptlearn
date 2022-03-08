@@ -222,14 +222,67 @@
 // checkAge(11);
 
 
-function pow(x,n){
-        let k = x;
-    for(let i=1;i<n;i++){
-        k *= x;
-    }
-    return k;
-}
-let x = prompt('자연수를 입력하세요.','');
-let n = prompt('제곱을 입력하세요.','');
+// function pow(x,n){
+//         let k = x;
+//     for(let i=1;i<n;i++){
+//         k *= x;
+//     }
+//     return k; //k 값을 반환한다.
+// }
+// let x = prompt('자연수를 입력하세요.','');
+// let n = prompt('제곱을 입력하세요.','');
 
-alert(pow(x, n));
+// alert(pow(x, n));
+//자바 스크립트에서 함수는 반드시 ()괄호가 있어야 호출된다.
+ 
+//     if (confirm(question)) yes() //인수 showOk, 인수 showCancel: '콜백 함수', '콜백'
+//     else no();
+//   }
+  
+//   function showOk() {
+//     alert( "동의하셨습니다." );
+//   }
+  
+//   function showCancel() {
+//     alert( "취소 버튼을 누르셨습니다." );
+//   }
+  
+//   // 사용법: 함수 showOk와 showCancel가 ask 함수의 인수로 전달됨
+//   ask("동의하십니까?", showOk, showCancel);
+
+// let gop = (x,y) => x*y; 이 화살표 함수는 아래 함수 표현식과 같다.
+// alert(gop(2,3)); 
+
+// function gop1(x,y){ 이 함수 선언은 아래 함수와 같다.
+//     let ma= x * y;
+//     return ma;
+// };
+// alert(gop1(3,4));
+
+// let gop2 = function(x,y){
+//     return x*y;
+// };
+// alert(gop2(4,5));
+
+//11. 화살표 함수로 변경하라.
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+//   }
+  
+//   ask(
+//     "동의하십니까?",
+//     function() { alert("동의하셨습니다."); },
+//     function() { alert("취소 버튼을 누르셨습니다."); }
+//   );
+
+
+function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+  }
+ask(
+    "동의하십니까?",
+() => alert("동의"),
+() => alert('취소')
+);
