@@ -306,22 +306,23 @@
 //   alert(pow(x,n))
 // }
 
-function pow(x,n) { //인수 사이의 공백과 같은 라인의 중괄호
-    let result = 1;
-    //
-    for(let i = 0; i < n ; i++) { //인수 사이의 공백과 같은 중괄호로 구문 구분
-        result *= x; //인수 사이의 공백
-    }
-    //
-    return result;
-}
+// function pow(x,n) { //인수 사이의 공백과 같은 라인의 중괄호
+//     let result = 1;
+//     //
+//     for(let i = 0; i < n ; i++) { //인수 사이의 공백과 같은 중괄호로 구문 구분
+//         result *= x; //인수 사이의 공백
+//     }
+//     //
+//     return result;
+// }
 
-let x = prompt('x?', ''); //두 줄로 나눠 작성
-let n = prompt('n?', ''); //구문 끝 세미콜론 포함
-//
-if (n <= 0) { //인수 사이의 공백
-    alert(`Power ${n} is not supported,
-    please enter an integer number greater than zero`);
-} else { //중괄호로 구문 구분
-    alert( pow(x, n)); //인수 사이의 공백
-}
+// let x = prompt('x?', ''); //두 줄로 나눠 작성
+// let n = prompt('n?', ''); //구문 끝 세미콜론 포함
+// //
+// if (n <= 0) { //인수 사이의 공백
+//     alert(`Power ${n} is not supported,
+//     please enter an integer number greater than zero`);
+// } else { //중괄호로 구문 구분
+//     alert( pow(x, n)); //인수 사이의 공백
+// }
+
