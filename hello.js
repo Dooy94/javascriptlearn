@@ -36,15 +36,19 @@
 // }
 
 // function ymd();
+/*
 
+/*객체 user, 키 name 과 age, 값 'Yoon'(문자형)과 29(정수형) 총 두개의 프로퍼티가 있다.
 // let user = {
 //     name: 'Yoon',
 //     age: 29,
 // };
 
 // let key = prompt('사용자의 어떤 정보를 얻고 싶으신가요?', 'name');
+// alert(user[key]); //Yoon 출력.
 
-// // alert(user[key]);
+
+/*계산된 프로퍼티
 // let fruit = prompt("어떤 과일을 구매하시겠습니까?", "apple");
 // let bag = {
 //   [fruit]: 5, // 변수 fruit에서 프로퍼티 이름을 동적으로 받아 옵니다.
@@ -58,12 +62,26 @@
 
 // alert(bag.apple);
 
+/*단축 프로퍼티
+-실무에서 종종 쓰이는 내용! */
+// function makeUser(name, age) {
+//     return {
+//         name: name,
+//         age: age,
+//     };
+// }
+// let user = makeUser('Yoon', 29);
+// alert(user.name);
+
+
+/* in 연산자로 프로퍼티 존재 여부 확인하기.
+
 // let user = {
 //     name: "John",
 //     age: 30,
 //     isAdmin: true
-//   };
-  
+//   };  
+
 //   for (let key in user) {
 //     // 키
 //     alert( key );  // name, age, isAdmin
@@ -71,7 +89,8 @@
 //     alert( user[key] ); // John, 30, true
 //   }
   
-//Q. 다음 각 동작을 한 줄씩, 코드로 작성해보세요.
+
+/*Q. 다음 각 동작을 한 줄씩, 코드로 작성해보세요.
 // let user = {
 //     name: 'John',
 //     surname: 'Smith',
@@ -82,7 +101,57 @@
 // alert(user.name);
 
 //Q.객체가 비어있는지 확인하기
-function isEmpty(obj){
-    for(let key in schedule)
-    alert(isEmpty(obj))
-}
+// function isEmpty(obj){
+//     for(let key in obj) {
+//         return false;
+//     }
+    
+//     return true;
+// }
+
+//Q. 모든 팀원의 월급에 대한 정보를 담고 있는 객체가 있다고 해봅시다.
+//모든 팀원의 월급을 합한 값을 구하고, 그 값을 변수 sum에 저장해주는 코드를 작성해보세요.
+//sum엔 390이 저장되어야겠죠?
+//주의: salaries가 비어있다면 sum에 0이 저장되어야 합니다.
+
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Pete: 130
+//   };
+
+//   let sum = 0;
+//   for(let key in salaries){
+//     sum += salaries[key];
+//   }
+
+//alert(sum);
+*/
+
+/*Q. 프로퍼티 값 두 배로 부풀리기
+//객체 obj의 프로퍼티 값이 숫자인 경우 그 값을 두 배해주는
+//함수 multiplyNumeric(obj)을 만들어보세요.
+
+// let gap = {
+//     one: 100,
+//     two: 200,
+//     title: 'gaps'
+// };
+
+// function multiplyNumeric(gap) {
+//     for(let key in obj){
+//         if(typeof obj[key] =='number'){
+//             obj[key] *= 2;
+//         }
+//     }
+}; */
+
+/*여러 객체를 하나로 병합하기. */
+// let user = { name: "John" };
+
+// let permissions1 = { canView: true };
+// let permissions2 = { canEdit: true };
+
+// // permissions1과 permissions2의 프로퍼티를 user로 복사합니다.
+// Object.assign(user, permissions1, permissions2);
+
