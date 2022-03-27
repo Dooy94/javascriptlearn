@@ -157,16 +157,16 @@
 // Object.assign(user, permissions1, permissions2);
 
 /*메서드 만들기 예제 */
-let user = {
-    name: 'Yoon',
-    age: '29',
-};
+// let user = {
+//     name: 'Yoon',
+//     age: '29',
+// };
 
-user.sayHi = function(){ //객체 프로퍼티에 함수를 할당->user에 할당된 sayHi 메서드
-    alert('안녕하세요!');
-};
+// user.sayHi = function(){ //객체 프로퍼티에 함수를 할당->user에 할당된 sayHi 메서드
+//     alert('안녕하세요!');
+// };
 
-user.sayHi(); //안녕하세요!
+// user.sayHi(); //안녕하세요!
 //객체에 할당된 함수를 호출 => user가 인사를 해준다.
 /*정의된 함수를 이용해서 메서드 만들기
 function sayHi(){
@@ -188,4 +188,64 @@ user = {
         alert('Hello');
     }
 };
+*/
+
+/*this를 이용해 계산기 만들기
+let calculator = {
+    read(){
+        this.a = +prompt('첫번째 값을 입럭하세요.',0);
+        this.b = +prompt('두번째 값을 입력하세요',0);
+    },
+
+    sum(){
+        return this.a + this.b;
+    },
+
+    mul(){
+        return this.a * this.b;
+    }
+  };
+  
+  calculator.read();
+  alert( calculator.sum() );
+  alert( calculator.mul() );
+*/
+
+/*생성자를 이용해 계산기 만들기
+function Calculator(){
+
+    this.read = function () {
+        this.a = +prompt('첫번재 값을 입력하세요.', 0);
+        this.b = +prompt('두번째 값을 입력하세요.', 0);
+    };
+
+    this.sum = function () {
+        return this.a + this.b;
+    };
+
+    this.mul = function () {
+        return this.a * this.b;
+    };
+}
+
+let calculator = new Calculator();
+calculator.read();
+
+alert("Sum=" + calculator.sum());
+alert("Mul=" + calculator.mul());
+*/
+
+/*생성자 함수Accumulator(startingValue) 누산기 만들기*/
+/*function Accumulator(startingValue) {
+    this.value = startingValue;
+
+    this.read = function () {
+        this.value += +prompt('누산할 값을 입럭하세요.', 0);
+    };
+
+}
+let accumulator = new Accumulator(1); // 최초값: 1
+accumulator.read(); // 사용자가 입력한 값을 더해줌
+accumulator.read(); // 사용자가 입력한 값을 더해줌
+alert(accumulator.value); // 최초값과 사용자가 입력한 모든 값을 더해 출력함
 */
