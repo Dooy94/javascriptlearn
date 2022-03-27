@@ -146,6 +146,7 @@
 //     }
 }; */
 
+
 /*여러 객체를 하나로 병합하기. */
 // let user = { name: "John" };
 
@@ -155,3 +156,36 @@
 // // permissions1과 permissions2의 프로퍼티를 user로 복사합니다.
 // Object.assign(user, permissions1, permissions2);
 
+/*메서드 만들기 예제 */
+let user = {
+    name: 'Yoon',
+    age: '29',
+};
+
+user.sayHi = function(){ //객체 프로퍼티에 함수를 할당->user에 할당된 sayHi 메서드
+    alert('안녕하세요!');
+};
+
+user.sayHi(); //안녕하세요!
+//객체에 할당된 함수를 호출 => user가 인사를 해준다.
+/*정의된 함수를 이용해서 메서드 만들기
+function sayHi(){
+    alert('안녕하세요!');
+};
+
+user.sayHi - sayHi;
+*/
+
+/*메서드 단축 구문
+user = {
+ sayHi: function() {
+     alert('Hello);
+ }
+};
+//단축 구문 이용
+user = {
+    sayHi() {
+        alert('Hello');
+    }
+};
+*/
